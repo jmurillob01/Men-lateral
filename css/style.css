@@ -1,24 +1,149 @@
-html {
-    height: 100%;
+/* TODO: Cambiar fuentes */
+
+/* Variables para colores */
+:root {
+    --bg-grey-100: #888585;
+    --bg-grey-101: #c8c1c1;
+    --bg-black-0: #000000;
+
+    /* Naranjas */
+    --bg-orange-100: #F77111;
+    --bg-orange-101: #D14C13;
+    --bg-orange-102: #EB3E18;
+    --bg-orange-103: #D1180A;
+    --bg-orange-104: #F70730;
+
+    /* Naranjas */
+    --bg-orange-200: #F77F11;
+    --bg-orange-201: #D15213;
+    --bg-orange-202: #EB3E17;
+    --bg-orange-203: #D1120A;
+    --bg-orange-204: #3E2730;
+    --bg-orange-204-Mod: #232021;
+
 }
 
 body {
-    height: 100%;
+    line-height: 1.5;
+    font-size: 16px;
 }
 
-/* * {
+* {
     outline: none;
     text-decoration: none;
-} */
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aqua; */
-    /* height: 50%; */
+    box-sizing: border-box;
 }
 
-.welcome {
-    
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.section {
+    background-color: rgb(47, 49, 47);
+    /* Hace que ocupe toda la pantalla */
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 1;
+}
+
+.aside {
+    width: 270px;
+    background-color: var(--bg-grey-101);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 10;
+}
+
+.aside .logo {
+    /* position: absolute; */
+    margin-bottom: 100px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+
+.aside .logo {
+    position: relative;
+    /* top: 20px; */
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.aside .logo a {
+    color: var(--bg-orange-103);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.aside .logo a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid var(--bg-orange-104);
+    border-left: 3px solid var(--bg-orange-104);
+    bottom: 0;
+    left: 0;
+}
+
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid var(--bg-orange-104);
+    border-right: 3px solid var(--bg-orange-104);
+    top: 0;
+    right: 0;
+}
+
+.aside .logo a span {
+    /* Cambiar fuente a cursiva*/
+    font-family: 40px;
+    position: relative;
+}
+
+.aside .nav {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px */
+}
+
+.aside .nav li {
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.aside .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-grey-100);
+    color: var(--bg-black-0);
+    text-decoration: none;
+    padding: 5px 15px;
 }
